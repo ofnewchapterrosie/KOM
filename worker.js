@@ -77,7 +77,7 @@ export default {
       const error = url.searchParams.get('error');
 
       if (error || !code) {
-        const appUrl = `${env.APP_ORIGIN}/komwind/?error=auth_denied`;
+        const appUrl = `${env.APP_ORIGIN}/KOM/?error=auth_denied`;
         return Response.redirect(appUrl, 302);
       }
 
@@ -96,7 +96,7 @@ export default {
         const tokenData = await tokenRes.json();
 
         if (!tokenData.access_token) {
-          const appUrl = `${env.APP_ORIGIN}/komwind/?error=token_failed`;
+          const appUrl = `${env.APP_ORIGIN}/KOM/?error=token_failed`;
           return Response.redirect(appUrl, 302);
         }
 
@@ -104,14 +104,14 @@ export default {
         // wird nicht an den Server gesendet, bleibt im Browser.
         // ALTERNATIV: Token in ein signiertes Cookie schreiben (sicherer für Production).
         const appUrl =
-          `${env.APP_ORIGIN}/komwind/#token=${tokenData.access_token}` +
-          `&expires_at=${tokenData.expires_at}` +
-          `&refresh_token=${tokenData.refresh_token}`;
+  `${env.APP_ORIGIN}/KOM/#token=${tokenData.access_token}` +
+  `&expires_at=${tokenData.expires_at}` +
+  `&refresh_token=${tokenData.refresh_token}`;
 
         return Response.redirect(appUrl, 302);
 
       } catch (err) {
-        const appUrl = `${env.APP_ORIGIN}/komwind/?error=server_error`;
+        const appUrl = `${env.APP_ORIGIN}/KOM/?error=server_error`;
         return Response.redirect(appUrl, 302);
       }
     }
