@@ -13,7 +13,7 @@ const App = (() => {
 
   // ─── Config ────────────────────────────────────────────────────────────────
   // Einzige Stelle, die du anpassen musst:
-  const WORKER_URL = 'https://komwind-worker.pumpingflo.workers.dev';
+  const WORKER_URL = 'https://komwind-worker.ofnewchapterrosie.workers.dev';
 
   // ─── State ─────────────────────────────────────────────────────────────────
   const state = {
