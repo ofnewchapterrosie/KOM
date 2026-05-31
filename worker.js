@@ -10,7 +10,7 @@
  * Environment Variables (Cloudflare Dashboard → Settings → Variables):
  *   STRAVA_CLIENT_ID
  *   STRAVA_CLIENT_SECRET
- *   APP_ORIGIN   → z.B. https://pumpingflo.github.io
+ *   APP_ORIGIN   → z.B. https://ofnewchapterrosie.github.io/
  */
 
 const STRAVA_BASE = 'https://www.strava.com/api/v3';
